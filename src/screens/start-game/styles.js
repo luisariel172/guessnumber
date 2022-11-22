@@ -19,6 +19,7 @@ export const styles =StyleSheet.create ({
         textAlign: 'center',
     },
     inputContainer: {
+        paddingVertical: 20,
         justifyContent:'center',
         alignItems: 'center',
         marginHorizontal: 20,
