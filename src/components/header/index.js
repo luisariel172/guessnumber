@@ -7,7 +7,7 @@ const Header = ({title}) => {
         <View style={styles.container}>
             <Text style={styles.title}>{ title }</Text>
         </View>
-    )
+    );
 }
 
 export default Header;
