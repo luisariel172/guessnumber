@@ -5,7 +5,7 @@ import { Card, Input, NumberContainer } from "../../components";
 import colors from "../../utils/colors";
 
 
-const StartGame = () => {
+const StartGame = ({onStartGame}) => {
     const [number, setNumber] = useState('');
     const[selectedNumber, setSelectedNumber] = useState(null); 
     const [confirmed, setConfirmed]= useState(false);
@@ -31,15 +31,13 @@ const StartGame = () => {
         }
     }
 
-    const onHandleStartGame =() => {}
-
     const confirmedOutput = () => confirmed ? (
         <Card style={styles.confirmedContainer}>
-            <Text style={styles.confirmedTitle}> Su numero seleccionado es:</Text>
+            <Text style={styles.confirmedTitle}> Seleccionaste el número:</Text>
             <NumberContainer number={selectedNumber} />
             <Button
                 title = "Comenzar el juego"
-                onPress={onHandleStartGame}
+                onPress={() => {onStartGame(selectedNumber)}}
                 color={colors.green}
             />
         </Card>
@@ -54,7 +52,7 @@ const StartGame = () => {
             <View style={styles.container}>
                 <Text style={styles.title}>Comencemos!</Text>
                 <Card style= {styles.inputContainer}>
-                    <Text style={styles.label} >Seleccione un numero</Text>
+                    <Text style={styles.label} >Selecciona un número</Text>
                     <Input 
                         style={styles.input}
                         placeholder="0"
@@ -69,7 +67,7 @@ const StartGame = () => {
                 <View style={styles.buttonContainer}>
             
                         <Button 
-                            title="Reset"
+                            title="Reiniciar"
                             onPress={onHandleReset}
                             color= {colors.primary}
                         />

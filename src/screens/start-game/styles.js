@@ -20,13 +20,14 @@ export const styles =StyleSheet.create ({
         textAlign: 'center',
     },
     inputContainer: {
+        width: '70%',
         paddingVertical: 20,
         justifyContent:'center',
         alignItems: 'center',
         marginHorizontal: 20,
     }, 
     input: {
-        width:'100%',
+        // width:'100%',
         // borderBottomColor:  colors.primary,
         // borderBottomWidth: 1,
         minWidth: 70,
@@ -50,8 +51,6 @@ export const styles =StyleSheet.create ({
     },
     confirmedTitle: {
         fontSize: 16,
-
     },
-    
 
 });
