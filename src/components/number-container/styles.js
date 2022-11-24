@@ -14,6 +14,6 @@ export const styles = StyleSheet.create({
     },
     number: {
         fontSize: 22,
-        fontWeight: 'bold',
+        fontFamily: 'Lato-Bold',
     },
 })
